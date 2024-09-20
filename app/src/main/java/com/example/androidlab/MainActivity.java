@@ -51,11 +51,11 @@ public class MainActivity extends AppCompatActivity {
 
             if (b)
             {
-                Snackbar.make(button, "The checkbox is now on" , Snackbar.LENGTH_LONG).setAction("undo", click -> listencheckbox.setChecked(!b)).show();
+                Snackbar.make(button, getString(R.string.check_on_message) , Snackbar.LENGTH_LONG).setAction("undo", click -> listencheckbox.setChecked(!b)).show();
             }
             else
             {
-                Snackbar.make(button, "The checkbox is now off" , Snackbar.LENGTH_LONG).setAction("undo", click -> listencheckbox.setChecked(!b)).show();
+                Snackbar.make(button, getString(R.string.check_off_message) , Snackbar.LENGTH_LONG).setAction("undo", click -> listencheckbox.setChecked(!b)).show();
             }
 
 

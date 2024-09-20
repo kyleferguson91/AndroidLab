@@ -2,5 +2,11 @@
     <string name="app_name">AndroidLab</string>
     <string name="hello_world">Bonjour le monde</string>
     <string name="button_text">Je suis un bouton!</string>
-    <string name="toast_message">"L\'étiquette a été mise à jour.</string>
+    <string name="toast_message">L\'étiquette a été mise à jour.</string>
+    <string name="check_on_message">La case à cocher est maintenant activée.</string>
+    <string name="check_off_message">La case à cocher est maintenant décochée.</string>
+    <string name="checkthisout">Regarde ça !</string>
+    <string name="pressme">Presse-moi</string>
+    <string name="switchonoff">Allumer/éteindre</string>
+    <string name="iloveandroid">J\'adore Android</string>
 </resources>
