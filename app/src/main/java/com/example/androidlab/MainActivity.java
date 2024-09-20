@@ -17,6 +17,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.google.android.material.snackbar.Snackbar;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -43,14 +45,21 @@ public class MainActivity extends AppCompatActivity {
 
         CheckBox listencheckbox = findViewById(R.id.checkBox);
 
-        listencheckbox.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            if (isChecked) {
-                // CheckBox is checked
-                Toast.makeText(MainActivity.this, "CheckBox Checked", Toast.LENGTH_SHORT).show();
-            } else {
-                // CheckBox is unchecked
-                Toast.makeText(MainActivity.this, "CheckBox Unchecked", Toast.LENGTH_SHORT).show();
+        listencheckbox.setOnCheckedChangeListener((button, isChecked) -> {
+
+            Boolean b = isChecked;
+
+            if (b)
+            {
+                Snackbar.make(button, "The checkbox is now on" , Snackbar.LENGTH_LONG).setAction("undo", click -> listencheckbox.setChecked(!b)).show();
             }
+            else
+            {
+                Snackbar.make(button, "The checkbox is now off" , Snackbar.LENGTH_LONG).setAction("undo", click -> listencheckbox.setChecked(!b)).show();
+            }
+
+
+
         });
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
